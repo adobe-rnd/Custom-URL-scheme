@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-customurlscheme"
-        version="4.3.0">
+        version="4.3.1">
 
   <name>Custom URL scheme</name>
 
@@ -24,7 +24,7 @@
   <preference name="URL_SCHEME" />
 
   <engines>
-    <engine name="cordova" version=">=3.0.0"/>
+    <engine name="cordova" version=">=7.0.0"/>
   </engines>
 
   <!-- ios -->
@@ -55,13 +55,13 @@
       <clobbers target="window.plugins.launchmyapp" />
     </js-module>
 
-    <config-file target="res/xml/config.xml" parent="/*">
+    <config-file target="app/src/main/res/xml/config.xml" parent="/*">
       <feature name="LaunchMyApp">
         <param name="android-package" value="nl.xservices.plugins.LaunchMyApp"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="src/nl/xservices/plugins"/>
+    <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="app/src/main/java/nl/xservices/plugins"/>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
       <intent-filter>
